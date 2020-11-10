@@ -1,0 +1,22 @@
+<template>
+    <lightning-card title="Product List" icon-name="custom:custom63">
+        <div class="variable + slds-var-m-around_medium">
+            <!--<lightning-overlayLibrary aura-id="overlayLib"></lightning-overlayLibrary>-->
+            <template if:true={products.data}>
+                <template for:each={products.data} for:item="prod">
+                    <!--<aura-component key={prod.Id}> -->
+                    <!-- <var key={prod.Id}> Product Family= {prod.Family} Product Code= {prod.ProductCode};</var> -->
+                    <a key={prod.Id}  href="https://aug2020bct1-dev-ed.lightning.force.com/lightning/o/Product2/home">
+                    <lightning-button style="padding: 20px 10;margin-bottom: 15px;border-bottom: 1px solid #ccc;padding-bottom: 10px;" key={prod.Id} label={prod.Name} iconname="utility:success" ></lightning-button>
+                    <lightning-helptext style="padding-right:30px" key={prod.Id} content= {prod.ProductCode}></lightning-helptext>
+                    </a>
+                    <!--</aura-component>-->
+                    <!-- <p key={prod.Id}>{prod.Name}</p> -->
+                </template>
+            </template>
+            <template if:true={products.error}>
+                {products.error}
+            </template>
+        </div>
+    </lightning-card>
+</template>

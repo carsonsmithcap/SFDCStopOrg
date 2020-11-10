@@ -1,0 +1,14 @@
+<apex:page standardController="Account" extensions="ProductMatrixExt" lightningStylesheets="true">
+    <apex:pageBlock >
+        <apex:repeat value="{!displayList}" var="l">
+            <apex:pageblockSection columns="1" title="{!l.ingredientName} Invoice Amount">
+                  <apex:outputLabel id="invoiceamountlabel" value="{!l.gettingAmount}" />
+                <apex:pageBlockTable value="{!l.productList}" var="p">
+                    <apex:column value="{!p.Name}" headerValue="Product Name" />
+                    <apex:column value="{!p.ProductCode}" headerValue="Product Code" />
+                    <apex:column value="{!p.Family}" headerValue="Product Family" />
+                </apex:pageBlockTable>
+            </apex:pageblockSection>
+        </apex:repeat>
+    </apex:pageBlock>
+</apex:page>

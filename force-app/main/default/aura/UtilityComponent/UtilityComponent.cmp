@@ -1,0 +1,16 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,flexipage:availableForAllPageTypes" access="global" >
+    <div>
+        <lightning:button label="Click to see Contribution Indicator" onclick="{! c.setPanelHeaderIcon }" variant="brand-outline" />
+        <lightning:icon iconName="utility:frozen" alternativeText="Light bulb" title="light bulb with warning variant"
+        variant="brand" />
+        <lightning:icon iconName="utility:frozen" alternativeText="Light bulb" title="light bulb with warning variant"
+        variant="error" />
+        <lightning:icon iconName="utility:frozen" alternativeText="Light bulb" title="light bulb with warning variant"
+        variant="warning" />
+        <lightning:icon iconName="utility:frozen" alternativeText="Light bulb" title="light bulb with warning variant"
+        variant="success" />
+    </div>
+    <div class="slds-m-vertical_medium">
+        <p>This account's contribution indicator result is: <span class="slds-text-heading_small"></span></p>
+    </div>
+</aura:component>
